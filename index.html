@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["motionchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Country');
+        data.addColumn('number', 'Year');
+        data.addColumn('number', 'Military Spending ($million USD)');
+        data.addColumn('number', 'GDP ($billion USD)');
+        data.addColumn('number', 'Military Spending Per Capita ($current USD)');
+        data.addColumn('number', 'GDP Per Capita ($current USD)');
+        data.addRows([
+          ['United States',  2011, 711338, 15517, 2282, 49790],
+          ['United Kingdom', 2011, 50270, 2609, 795, 41240],
+          ['Russia',  2011,  70238,  2031, 491, 14212],
+          ['Germany', 2011,  48140, 3757, 599, 46810],
+          ['Canada',  2011,  21394, 1788, 622, 52082],
+          ['China', 2011,  137967,  7572,  102, 5633],
+          ['Australia', 2011,  26597, 1390, 1190, 62245],
+          ['South Korea', 2011,  30992, 1202, 620, 24079],
+          ['Saudi Arabia',  2011,  48531, 671, 1718,  23770],
+          ['France',  2011,  64601, 2862, 988, 43810],
+          ['United States', 2012,  684780,  16155, 2180, 51450],
+          ['United Kingdom',  2012,  58496, 2646, 918, 41538],
+          ['Russia',  2012,  81469, 2170, 568, 15154],
+          ['Germany', 2012,  46471, 3543, 577, 44065],
+          ['Canada',  2012,  20452, 1824, 588, 52496],
+          ['China', 2012,  157460,  8560, 116, 6337],
+          ['Australia', 2012,  26217, 1538, 1153, 67677],
+          ['South Korea', 2012,  31952, 1222, 636, 24358],
+          ['Saudi Arabia',  2012,  56498, 735, 1942, 25303],
+          ['France',  2012,  60035, 2681, 914, 40838],
+          ['United States', 2013,  639704,  16691, 2023, 52787],
+          ['United Kingdom',  2013,  56962, 2719, 888, 42407],
+          ['Russia',  2013,  88353, 2230, 615, 15543],
+          ['Germany', 2013,  45931, 3752, 569, 46530],
+          ['Canada',  2013,  18516, 1842, 526, 52413],
+          ['China', 2013,  177848,  9607, 131, 7077],
+          ['Australia', 2013,  24825, 1567, 1073, 67792],
+          ['South Korea', 2013,  34354, 1305, 681, 25890],
+          ['Saudi Arabia',  2013,  67020, 746, 2238, 24934],
+          ['France',  2013,  62417, 2808, 945, 42554],
+          ['United States', 2014,  609914,  17393, 1914, 54598],
+          ['United Kingdom',  2014,  59183, 2998, 915, 46412],
+          ['Russia',  2014,  84697, 2063, 588,  14348],
+          ['Germany', 2014,  46103, 3879, 569, 47902],
+          ['Canada',  2014,  17854, 1792, 502, 50440],
+          ['China', 2014,  199651,  10482, 146, 7683],
+          ['Australia', 2014,  25784, 1459, 1099, 62214],
+          ['South Korea', 2014,  37386, 1411, 736, 27811],
+          ['Saudi Arabia',  2014,  80726, 756, 2622, 24575],
+          ['France',  2014,  63614, 2849, 959, 42955],
+          ['United States', 2015,  596024,  18036, 1857, 56207],
+          ['United Kingdom',  2015,  55460, 2861, 851, 43929],
+          ['Russia',  2015,  66421, 1365, 460, 9478],
+          ['Germany', 2015,  39393, 3363, 482, 41176],
+          ['Canada',  2015,  15031, 1552, 419,  43315],
+          ['China', 2015,  214787,  11064, 156, 8069],
+          ['Australia', 2015,  23588, 1345, 991, 56554],
+          ['South Korea', 2015,  36435, 1382, 714, 27105],
+          ['Saudi Arabia',  2015,  87186, 654, 2762, 20732],
+          ['France',  2015,  50860, 2433, 763, 36526],
+          ['Total Military Spending',  2011,  1210068, 0, 0, 0],
+          ['Total Military Spending',  2012,  1223830, 0, 0, 0],
+          ['Total Military Spending',  2013,  1215930, 0, 0, 0],
+          ['Total Military Spending',  2014,  1224912, 0, 0, 0],
+          ['Total Military Spending',  2015,  1185185, 0, 0, 0]
+
+        ]);
+
+        var chart = new google.visualization.MotionChart(document.getElementById('chart_div'));
+
+        chart.draw(data, {width: 640, height:480});
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 640px; height: 480px;"></div>
+  </body>
+</html>
